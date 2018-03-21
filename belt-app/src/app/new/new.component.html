@@ -1,0 +1,15 @@
+<h3>Know of a pet needing a home?</h3>
+<div *ngIf="error">
+  <p *ngFor="let err of errorMessage">{{err}}</p>
+</div>
+<form (submit)="add()">
+  Name: <input type="text" name="Name" [(ngModel)]="Name"> <br>
+  Type: <input type="text" name="Type" [(ngModel)]="Type"><br>
+  Description: <input type="text" name="Description" [(ngModel)]="Description"> <br>
+  Skills: <br>
+     Skill1: <input type="text" name="Skill1" [(ngModel)]="Skill1"> <br>
+     Skill2: <input type="text" name="Skill2" [(ngModel)]="Skill2"> <br>
+     Skill3: <input type="text" name="Skill3" [(ngModel)]="Skill3"> <br>
+  <button>Add Pet</button>
+</form> 
+<button (click)="cancel()">Cancel</button>
